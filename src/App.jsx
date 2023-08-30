@@ -1,60 +1,35 @@
-import cabecalho from "./assets/components/cabecalho"
+import reactLogo from "./assets/react.svg";
+import Cabecalho from "./components/Cabecalho";
+import Conteudo from "./components/Conteudo";
 
 export default function App() {
 
-//area declarativa
+  //ÁREA DECLARATIVA
+
+  let reactLogoTextoAlt = "Logo do React";
 
   return (
-
     <>
-      {/* Area Imperativa! */}
+      {/* Área imperativa! */}
       <div>
+        {/* Um cabeçalho com um header, um h1, uma lista ul com 3 itens com 3 links. */}
+      <Cabecalho/>
+        {/* Uma seção com uma div com 3 parágrafos, com 3 linhas de lorem, uma imagem */}
 
-       <cabecalho/>
+      <Conteudo reactLogoProps={reactLogo} reactLogoTextoAltProps={reactLogoTextoAlt} />
 
-       <section>
-    <div>
-      <p>
-      Lorem Ipsum is simply dummy text of the printing and 
-      typesetting industry. Lorem Ipsum has been the industry's
-      standard dummy text ever since the 1500s, when an unknown 
-      printer took a galley of type and scrambled it to make a 
-      type specimen book. It has survived not only five centuries, 
-      but also the leap into electronic typesetting, remaining 
-      essentially unchanged. It was popularised in the 1960s
-      </p>
-      <p>
-      Lorem Ipsum is simply dummy text of the printing and 
-      typesetting industry. Lorem Ipsum has been the industry's
-      standard dummy text ever since the 1500s, when an unknown 
-      printer took a galley of type and scrambled it to make a 
-      type specimen book. It has survived not only five centuries, 
-      but also the leap into electronic typesetting, remaining 
-      essentially unchanged. It was popularised in the 1960s
-      </p>
-      <p>
-      Lorem Ipsum is simply dummy text of the printing and 
-      typesetting industry. Lorem Ipsum has been the industry's
-      standard dummy text ever since the 1500s, when an unknown 
-      printer took a galley of type and scrambled it to make a 
-      type specimen book. It has survived not only five centuries, 
-      but also the leap into electronic typesetting, remaining 
-      essentially unchanged. It was popularised in the 1960s
-      </p>
 
-    </div>
-
-       </section>
-          <div>
-
-          </div>
-
+        {/* Um rodapé com uma div, uma lista ul com 3 itens e links para redes sociais */}
         <footer>
-
+          <div>
+            <ul>
+              <li><a href="#">GitHub</a></li>
+              <li><a href="#">X</a></li>
+              <li><a href="#">Reddit</a></li>
+            </ul>
+          </div>
         </footer>
-        </div>
-
+      </div>
     </>
-   
   )
 }
